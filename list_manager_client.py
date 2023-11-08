@@ -26,6 +26,7 @@ while True:
     print(response)
 
     if command == 'exit':
+        client_socket.close()
         break
 
 # Close the client socket

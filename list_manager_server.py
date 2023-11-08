@@ -13,7 +13,7 @@ lists = {}
 
 # Function to close socket on Ctrl + C
 def signal_handler(sig, frame):
-    print("Shutting down server...")
+    print("Sever is shutting down")
     server_socket.close()
     sys.exit(0)
 
@@ -39,15 +39,52 @@ while True:
     request = client_socket.recv(1024).decode('utf-8')
     log(f"REQUEST {request}", 'INFO')
 
-    # need to process the request and generate a response
-    response = "this is a test"
+    shutDown = False
+    response = ""
+
+    # catalog command 
+    if request == "catalog":
+        if lists:
+            response = "List of defined lists:\n"
+            for i, list_title in enumerate(lists, start=1):
+                response += f"{i}. {list_title}\n"
+        else:
+            response = "No lists defined."
+
+    # create command 
+    if request.startswith("create "):
+        list_title = request.split("create ")[1].strip()
+        if list_title not in lists:
+            lists[list_title] = []
+            response = f"List '{list_title}' created successfully."
+        else:
+            response = f"List '{list_title}' already exists."
+
+    # edit command 
+
+    # display command
+
+    # delete command 
+
+    # exit command 
+    if request == "exit":
+        shutDown = True
+        response = "Shutting down server..."
     
     # Send the response back to the client
     client_socket.send(response.encode('utf-8'))
     
     log(f"RESPONSE {response}", 'INFO')
     
+    if shutDown:
+        server_socket.close()
+        sys.exit(0)
+        break
+    
+    print("test")
+
     client_socket.close()
+
 
 # Clean up and close the server socket
 server_socket.close()
