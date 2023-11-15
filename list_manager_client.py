@@ -1,8 +1,13 @@
 import socket
 import sys
+import json
 
-SERVER_IP = '127.0.0.1'  # Server's IP address
-SERVER_PORT = 12000  # Server port
+# Read IP and port from config file
+with open('config.json', 'r') as config_file:
+    config_data = json.load(config_file)
+
+SERVER_PORT = config_data['Server']['port']
+SERVER_IP = config_data['Server']['ip']
 
 # create a socket for the client
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -18,6 +23,7 @@ def send_request(request):
 
 while True:
     command = input("Enter a command: ")
+    sys.stdout.flush()
     
     # Send the command to the server
     response = send_request(command)
