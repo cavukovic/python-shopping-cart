@@ -114,17 +114,20 @@ while True:
                 
                 # remove command
                 elif sub_command.startswith("remove "):
-                    item_number = int(sub_command.split("remove ")[1].strip())
-                    if 1 <= item_number <= len(lists[list_title]):
-                        removed_item = lists[list_title].pop(item_number - 1)
-                        response = f"Removed item '{removed_item}' from list '{list_title}'."
-
-                        client_socket.send(response.encode('utf-8'))
-                        log(f"RESPONSE {response}", 'INFO')
-                    else:
-                        response = "ERROR: Invalid item number."
-                        client_socket.send(response.encode('utf-8'))
-
+                    item_number = sub_command.split("remove ")[1].strip()
+                    try:
+                        item_number = int(item_number)
+                        if 1 <= item_number <= len(lists[list_title]):
+                            removed_item = lists[list_title].pop(item_number - 1)
+                            response = f"Removed item '{removed_item}' from list '{list_title}'."
+                            client_socket.send(response.encode('utf-8'))
+                            log(f"RESPONSE {response}", 'INFO')
+                        else:
+                            response = "ERROR: Invalid item number."
+                            client_socket.send(response.encode('utf-8'))
+                            log(f"RESPONSE {response}", 'ERROR')
+                    except ValueError:
+                        response = f"ERROR: '{item_number}' is not a number.\nThe command should be of the format 'remove <item-number>'"
                         client_socket.send(response.encode('utf-8'))
                         log(f"RESPONSE {response}", 'ERROR')
                 
