@@ -142,7 +142,10 @@ while True:
                     log(f"RESPONSE {response}", 'ERROR')
 
                 response = ""
-
+        else:
+            response = f"ERROR: a list does not exist by the name of '{list_title}'"
+            client_socket.send(response.encode('utf-8'))
+            log(f"RESPONSE {response}", 'ERROR')
     # display command
     elif request.startswith("display "):
         list_title = request.split("display ")[1].strip()
@@ -154,7 +157,9 @@ while True:
             client_socket.send(response.encode('utf-8'))
             log(f"RESPONSE {response}", 'INFO')
         else:
-            response = "Invalid list number."
+            response = f"List '{list_title}' does not exist"
+            client_socket.send(response.encode('utf-8'))
+            log(f"RESPONSE {response}", 'ERROR')
 
     # delete command 
     elif request.startswith("delete "):
@@ -179,7 +184,7 @@ while True:
         client_socket.send(response.encode('utf-8'))
         log(f"RESPONSE {response}", 'INFO')
     else:
-        response = "ERROR: Invalid command."
+        response = "ERROR: Invalid command.\n\nValid commands are:\ncatalog\ncreate <list title>\nedit <list title>\ndisplay <list title>\ndelete <list title>\nedit\n"
         client_socket.send(response.encode('utf-8'))
         log(f"RESPONSE {response}", 'ERROR')
         

@@ -1,0 +1,184 @@
+2023-11-28 13:33:34.094454 REQUEST catalog INFO
+2023-11-28 13:33:34.095060 RESPONSE No lists defined. INFO
+2023-11-28 13:38:46.448585 REQUEST exit INFO
+2023-11-28 13:38:46.450195 RESPONSE Shutting down server... INFO
+2023-11-28 13:38:52.269503 REQUEST d INFO
+2023-11-28 13:38:52.270284 RESPONSE ERROR: Invalid command.
+Valid commands are:
+catalog
+create <list title>
+edit <list title>
+display <list title>
+delete <list title>
+edit ERROR
+2023-11-28 13:39:14.761894 REQUEST exit INFO
+2023-11-28 13:39:14.762426 RESPONSE Shutting down server... INFO
+2023-11-28 13:39:19.368513 REQUEST fd INFO
+2023-11-28 13:39:19.369349 RESPONSE ERROR: Invalid command.
+
+Valid commands are:
+catalog
+create <list title>
+edit <list title>
+display <list title>
+delete <list title>
+edit
+ ERROR
+2023-11-28 13:39:28.078282 REQUEST exit INFO
+2023-11-28 13:39:28.078926 RESPONSE Shutting down server... INFO
+2023-11-28 13:40:18.880481 REQUEST create newlist INFO
+2023-11-28 13:40:18.881744 RESPONSE List 'newlist' created successfully. INFO
+2023-11-28 13:40:20.430722 REQUEST catalog INFO
+2023-11-28 13:40:20.431372 RESPONSE List of defined lists:
+1. newlist
+ INFO
+2023-11-28 13:40:25.672267 REQUEST edit new INFO
+2023-11-28 13:40:28.504408 REQUEST  INFO
+2023-11-28 13:40:28.504852 RESPONSE ERROR: Invalid command.
+
+Valid commands are:
+catalog
+create <list title>
+edit <list title>
+display <list title>
+delete <list title>
+edit
+ ERROR
+2023-11-28 13:40:28.504971 REQUEST  INFO
+2023-11-28 13:44:37.488122 REQUEST catalog INFO
+2023-11-28 13:44:37.490515 RESPONSE No lists defined. INFO
+2023-11-28 13:44:41.110913 REQUEST create newlist INFO
+2023-11-28 13:44:41.111556 RESPONSE List 'newlist' created successfully. INFO
+2023-11-28 13:44:42.899722 REQUEST catalog INFO
+2023-11-28 13:44:42.900798 RESPONSE List of defined lists:
+1. newlist
+ INFO
+2023-11-28 13:44:45.614555 REQUEST edit fs INFO
+2023-11-28 13:44:45.615241 RESPONSE ERROR: a list does not exist by the name of 'fs' ERROR
+2023-11-28 13:44:50.244541 REQUEST edit newlist INFO
+2023-11-28 13:44:50.245569 RESPONSE Editing list 'newlist'. INFO
+2023-11-28 13:44:54.954066 REQUEST show INFO
+2023-11-28 13:44:54.954719 RESPONSE List items for 'newlist':
+ INFO
+2023-11-28 13:45:04.125367 REQUEST quit INFO
+2023-11-28 13:45:04.126557 RESPONSE Exiting edit mode. INFO
+2023-11-28 13:45:06.184382 REQUEST exit INFO
+2023-11-28 13:45:06.184755 RESPONSE Shutting down server... INFO
+2023-11-28 13:46:26.431719 REQUEST create newlist INFO
+2023-11-28 13:46:26.434451 RESPONSE List 'newlist' created successfully. INFO
+2023-11-28 13:46:28.641375 REQUEST edit newlist INFO
+2023-11-28 13:46:28.641989 RESPONSE Editing list 'newlist'. INFO
+2023-11-28 13:46:33.141237 REQUEST add glsdgsdlkhg sdl fjsd lksdf INFO
+2023-11-28 13:46:33.141572 RESPONSE Added item 'glsdgsdlkhg sdl fjsd lksdf' to list 'newlist'. INFO
+2023-11-28 13:46:35.918245 REQUEST show INFO
+2023-11-28 13:46:35.918751 RESPONSE List items for 'newlist':
+1. glsdgsdlkhg sdl fjsd lksdf
+ INFO
+2023-11-28 13:47:03.310950 REQUEST remove 1 INFO
+2023-11-28 13:47:03.312271 RESPONSE Removed item 'glsdgsdlkhg sdl fjsd lksdf' from list 'newlist'. INFO
+2023-11-28 13:50:40.474735 REQUEST catalog INFO
+2023-11-28 13:50:40.476633 RESPONSE No lists defined. INFO
+2023-11-28 13:50:50.945775 REQUEST create newlist INFO
+2023-11-28 13:50:50.946949 RESPONSE List 'newlist' created successfully. INFO
+2023-11-28 13:50:52.754695 REQUEST catalog INFO
+2023-11-28 13:50:52.755341 RESPONSE List of defined lists:
+1. newlist
+ INFO
+2023-11-28 13:51:07.260289 REQUEST edit newlist INFO
+2023-11-28 13:51:07.261009 RESPONSE Editing list 'newlist'. INFO
+2023-11-28 13:51:15.237039 REQUEST show INFO
+2023-11-28 13:51:15.237604 RESPONSE List items for 'newlist':
+ INFO
+2023-11-28 13:51:19.118322 REQUEST add sakjghsdhsd INFO
+2023-11-28 13:51:19.118946 RESPONSE Added item 'sakjghsdhsd' to list 'newlist'. INFO
+2023-11-28 13:51:21.819458 REQUEST add gssd INFO
+2023-11-28 13:51:21.820152 RESPONSE Added item 'gssd' to list 'newlist'. INFO
+2023-11-28 13:51:23.393446 REQUEST add gdsgj sd INFO
+2023-11-28 13:51:23.394119 RESPONSE Added item 'gdsgj sd' to list 'newlist'. INFO
+2023-11-28 13:51:25.053059 REQUEST add gsjgd INFO
+2023-11-28 13:51:25.053732 RESPONSE Added item 'gsjgd' to list 'newlist'. INFO
+2023-11-28 13:51:48.371267 REQUEST show INFO
+2023-11-28 13:51:48.373957 RESPONSE List items for 'newlist':
+1. sakjghsdhsd
+2. gssd
+3. gdsgj sd
+4. gsjgd
+ INFO
+2023-11-28 13:51:56.158042 REQUEST delete 3 INFO
+2023-11-28 13:51:56.158559 RESPONSE ERROR: Invalid edit sub-command. ERROR
+2023-11-28 13:52:07.374669 REQUEST remove 3 INFO
+2023-11-28 13:52:07.375453 RESPONSE Removed item 'gdsgj sd' from list 'newlist'. INFO
+2023-11-28 13:52:09.875453 REQUEST show INFO
+2023-11-28 13:52:09.876451 RESPONSE List items for 'newlist':
+1. sakjghsdhsd
+2. gssd
+3. gsjgd
+ INFO
+2023-11-28 13:52:14.364148 REQUEST remove 1 INFO
+2023-11-28 13:52:14.364809 RESPONSE Removed item 'sakjghsdhsd' from list 'newlist'. INFO
+2023-11-28 13:52:15.514371 REQUEST show INFO
+2023-11-28 13:52:15.515504 RESPONSE List items for 'newlist':
+1. gssd
+2. gsjgd
+ INFO
+2023-11-28 13:52:21.407269 REQUEST quit INFO
+2023-11-28 13:52:21.408461 RESPONSE Exiting edit mode. INFO
+2023-11-28 13:52:26.774320 REQUEST create list2 INFO
+2023-11-28 13:52:26.775624 RESPONSE List 'list2' created successfully. INFO
+2023-11-28 13:52:34.819033 REQUEST edit list2 INFO
+2023-11-28 13:52:34.819707 RESPONSE Editing list 'list2'. INFO
+2023-11-28 13:52:36.407217 REQUEST add hgdf INFO
+2023-11-28 13:52:36.407822 RESPONSE Added item 'hgdf' to list 'list2'. INFO
+2023-11-28 13:52:37.995644 REQUEST add dg  INFO
+2023-11-28 13:52:37.996156 RESPONSE Added item 'dg' to list 'list2'. INFO
+2023-11-28 13:52:39.355641 REQUEST add hdsgf INFO
+2023-11-28 13:52:39.356253 RESPONSE Added item 'hdsgf' to list 'list2'. INFO
+2023-11-28 13:52:40.732673 REQUEST quit INFO
+2023-11-28 13:52:40.733302 RESPONSE Exiting edit mode. INFO
+2023-11-28 13:52:49.471970 REQUEST catalog INFO
+2023-11-28 13:52:49.472679 RESPONSE List of defined lists:
+1. newlist
+2. list2
+ INFO
+2023-11-28 13:52:55.236360 REQUEST display list2 INFO
+2023-11-28 13:52:55.236998 RESPONSE Displaying items for list 'list2':
+1. hgdf
+2. dg
+3. hdsgf
+ INFO
+2023-11-28 13:53:04.591277 REQUEST display newlist INFO
+2023-11-28 13:53:04.592246 RESPONSE Displaying items for list 'newlist':
+1. gssd
+2. gsjgd
+ INFO
+2023-11-28 13:53:21.929725 REQUEST dskfajsd INFO
+2023-11-28 13:53:21.930918 RESPONSE ERROR: Invalid command.
+
+Valid commands are:
+catalog
+create <list title>
+edit <list title>
+display <list title>
+delete <list title>
+edit
+ ERROR
+2023-11-28 13:53:30.514000 REQUEST display sdagsd INFO
+2023-11-28 13:53:39.538937 REQUEST  INFO
+2023-11-28 13:53:39.539330 RESPONSE ERROR: Invalid command.
+
+Valid commands are:
+catalog
+create <list title>
+edit <list title>
+display <list title>
+delete <list title>
+edit
+ ERROR
+2023-11-28 13:53:39.539435 REQUEST  INFO
+2023-11-28 13:55:12.938018 REQUEST create list INFO
+2023-11-28 13:55:12.940205 RESPONSE List 'list' created successfully. INFO
+2023-11-28 13:55:16.693550 REQUEST display gds INFO
+2023-11-28 13:55:16.694250 RESPONSE List 'gds' does not exist ERROR
+2023-11-28 13:55:21.923527 REQUEST display list INFO
+2023-11-28 13:55:21.924732 RESPONSE Displaying items for list 'list':
+ INFO
